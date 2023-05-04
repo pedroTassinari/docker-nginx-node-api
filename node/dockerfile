@@ -1,0 +1,10 @@
+FROM node:15
+
+WORKDIR /usr/src/app
+
+COPY ./app .
+RUN npm init -y && npm i express mysql
+    
+EXPOSE 3000
+
+CMD ["node", "index.js"]
